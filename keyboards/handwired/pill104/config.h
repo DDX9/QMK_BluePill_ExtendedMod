@@ -21,14 +21,15 @@
 #define PRODUCT_ID 0x5444
 #define DEVICE_VER 0x0001
 
-#define MANUFACTURER "MICA"
-#define PRODUCT "Pretender"
+#define MANUFACTURER "MOS"
+#define PRODUCT "MACTRO"
 
 #define DIODE_DIRECTION COL2ROW
+#define MATRIX_HAS_GHOST
 
 /* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 17
+#define MATRIX_ROWS 11
+#define MATRIX_COLS 10
 
 /* key matrix pins */
 /*

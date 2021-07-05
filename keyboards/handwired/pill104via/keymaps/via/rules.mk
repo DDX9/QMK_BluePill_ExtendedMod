@@ -1,0 +1,7 @@
+
+# VIA Support 
+VIA_ENABLE = yes 
+BOOTMAGIC_ENABLE= lite
+RAW_ENABLE = yes
+DYNAMIC_KEYMAP_ENABLE = yes
+

@@ -18,4 +18,4 @@ AUDIO_ENABLE = no           # Audio output
 OLED_DRIVER_ENABLE = no
 ENCODER_ENABLE = no
 
-DEFAULT_FOLDER = handwired/pill60/bluepill
+DEFAULT_FOLDER = handwired/pill104/bluepill

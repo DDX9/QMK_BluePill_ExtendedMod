@@ -17,18 +17,18 @@
 
 #include "config_common.h"
 
-#define VENDOR_ID 0x4454
-#define PRODUCT_ID 0x5444
+#define VENDOR_ID 0x44A4
+#define PRODUCT_ID 0x54A4
 #define DEVICE_VER 0x0001
 
-#define MANUFACTURER "MICA"
-#define PRODUCT "Pretender"
+#define MANUFACTURER "MOS-VIA"
+#define PRODUCT "MACTROVIA"
 
 #define DIODE_DIRECTION COL2ROW
 
 /* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 17
+#define MATRIX_ROWS 11
+#define MATRIX_COLS 10
 
 /* key matrix pins */
 /*
