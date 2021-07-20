@@ -85,7 +85,9 @@ In short the process will as follow:
 
  
 ### Compile your firmware
-QMK has a specific command on how to compile firmware, 
+QMK has a specific command on how to compile firmware
+command as follow:     
+{project folder}:{keymaps}:{flash utilities}
 
 ***
 <!-- 
