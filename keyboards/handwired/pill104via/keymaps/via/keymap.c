@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_H,       KC_J,       KC_K,       KC_L,
         KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_N,       KC_M,       KC_COMM,    KC_DOT, 
         
-        KC_LCTL,    KC_LALT,    KC_LGUI,                            KC_SPC,     KC_MENU,    KC_NO,    KC_RALT,   TO(WIN_LYR) ,
+        KC_LCTL,    KC_LALT,    KC_LGUI,                            KC_SPC,     KC_MENU,    KC_NO,    KC_RALT,   MO(BCKLG_LYR) ,
         KC_PMNS,    KC_PSLS,    KC_NLCK,    KC_PAUS,    KC_SLCK,    KC_PSCR,    KC_F12,     KC_F11,     KC_F10,      
         KC_PAST,    KC_P8,       KC_P7,     KC_PGUP,    KC_HOME,    KC_INS,     KC_BSPC,    KC_EQL,     KC_MINS,    KC_0,
         KC_P9,      KC_P6,      KC_P5,      KC_PGDN,    KC_END,     KC_DEL,     KC_BSLS,    KC_RBRC,    KC_LBRC,    KC_P,

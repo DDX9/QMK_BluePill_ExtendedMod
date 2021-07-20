@@ -56,3 +56,6 @@
     { B8 }
 #define ENCODER_RESOLUTION 2
  */
+
+ //VIA EEPROM USAGE
+ 
