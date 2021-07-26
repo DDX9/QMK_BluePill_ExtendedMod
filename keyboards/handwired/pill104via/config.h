@@ -17,8 +17,8 @@
 
 #include "config_common.h"
 
-#define VENDOR_ID 0x44A4
-#define PRODUCT_ID 0x54A4
+#define VENDOR_ID 0x44A3
+#define PRODUCT_ID 0x54A3
 #define DEVICE_VER 0x0001
 
 #define MANUFACTURER "MOS-VIA"
@@ -57,5 +57,43 @@
 #define ENCODER_RESOLUTION 2
  */
 
- //VIA EEPROM USAGE
- 
+ //VIA EEPROM USAGE, works but mess up the whole eeprom
+ #define DYNAMIC_KEYMAP_LAYER_COUNT 4
+
+// EEPROM usage
+#define EEPROM_MAGIC 0x451F
+#define EEPROM_MAGIC_ADDR 32
+// Bump this every time we change what we store
+// This will automatically reset the EEPROM with defaults
+// and avoid loading invalid data from the EEPROM
+#define EEPROM_VERSION 0x08
+#define EEPROM_VERSION_ADDR 34
+
+// Dynamic keymap starts after EEPROM version
+#define DYNAMIC_KEYMAP_EEPROM_ADDR 35
+// DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR = DYNAMIC_KEYMAP_EEPROM_ADDR + (DYNAMIC_KEYMAP_LAYER_COUNT * MATRIX_ROWS * MATRIX_COLS * 2)
+// 35+(4*11*10*2)=915
+//DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE = 1024 - DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR
+// 1024-914=109
+#define DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR 915    // **** CHANGE THIS BASED ON MATRIX_ROWS & MATRIX_COLS ****
+#define DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE 109    // **** CHANGE THIS BASED ON 1024-DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR ****
+#define DYNAMIC_KEYMAP_MACRO_COUNT 16
+
+// // EEPROM usage
+// #define EEPROM_MAGIC 0x451F
+// #define EEPROM_MAGIC_ADDR 32
+// // Bump this every time we change what we store
+// // This will automatically reset the EEPROM with defaults
+// // and avoid loading invalid data from the EEPROM
+// #define EEPROM_VERSION 0x08
+// #define EEPROM_VERSION_ADDR 34
+
+// // Dynamic keymap starts after EEPROM version
+// #define DYNAMIC_KEYMAP_EEPROM_ADDR 35
+// // DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR = DYNAMIC_KEYMAP_EEPROM_ADDR + (DYNAMIC_KEYMAP_LAYER_COUNT * MATRIX_ROWS * MATRIX_COLS * 2)
+// // 34+(1*11*10*2)=254
+// //DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE = 1024 - DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR
+// // 1024-254=110
+// #define DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR 254    // **** CHANGE THIS BASED ON MATRIX_ROWS & MATRIX_COLS ****
+// #define DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE 770    // **** CHANGE THIS BASED ON 1024-DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR ****
+// #define DYNAMIC_KEYMAP_MACRO_COUNT 16

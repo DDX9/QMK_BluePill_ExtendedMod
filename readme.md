@@ -1,5 +1,5 @@
 # Handwired BluePill 87 / 104 QMK Guide
-This is a forked QMK repository that aim to aid beginner to smoothen their handwired keyboard modding journey. Bluepill is a widely available, cheap ARM microcontroller that catch my atttention during my hunt for cheap and enough I/O for TKL or Full Fledge 104 ANSI layout. 
+This is a forked QMK repository that aim to aid beginner to smoothen their handwired keyboard modding journey. Bluepill is a widely available, cheap ARM microcontroller that caught my atttention during my hunt for cheap and enough I/O for TKL or Full Fledge 104 ANSI layout. 
 
 This guide is divided into 2 sections, Wiring & Firmware. This guide should be enough for you to begin your journey of creating your own custom QMK firmware for bluepill (STM32F108C8T6). Before proceed, this is by no means a full replacement on commercialised keyboard. You may face a lot of issue and problem if you have no idea what you are trying to do. If you are a person who purely want to explore **HANDWIRED QMK keyboard**, Welcome aboard.  
 
@@ -13,13 +13,34 @@ Current limitation on my implementation: (due to my limited understanding QMK of
 4. Non-split KB layout
 5. No Bluetooth Connection, it was said that QMK do support bluetooth but the option is limited,  it is a deep murky water to explore, for ARM controller, as far as i can tell. 
 
-##### *some guide on the listed feature might be supported in future, currently there are few features im keen on implementing it on my bluepill KB
+##### *some of the listed feature might be supported in future, currently there are few features im keen on implementing it on my bluepill KB
  
  &nbsp; 
  &nbsp; 
  ****
  &nbsp;  
- 
+ ## Summarised Procedure 
+ This section is about summaried procedures for creating your own BluePill QMK firmware. For more detailed description kindly check the corresponding section. 
+### Electronics / Wiring 
+The wiring process will be as follow: 
+1. Make sure you have a Bluepill flashed with USB Bootloader, details procedure check Bluepill Board preparation below
+2. Prepare your handwire keyboard with switch
+3. Design your keyboard keymaps before soldering(where wire should run, where is your bluepill will be placed etc)
+4. Solder your switches  
+5. Document your switch array as you progress 
+
+### Firmware 
+The firmware preparation process will be as follow: 
+1. Setup QMK enviroment 
+2. Configure your keyboard configuration and keymaps accordingly 
+3. Compile your firmware
+4. Upload your firmwarer to Bluepill
+6. Debug, recompile and test.
+##### every OS has slightly different setup and you might need to search your problem on the web, this is not a easy journey for non-programmer. Countless of time need to be spent on trying to debug your circuit / firmware try to figure out what went wrong. 
+ &nbsp; 
+ &nbsp; 
+ ****
+ &nbsp; 
 ## Electronics / Wiring
 In this section is all about physical wiring and soldering. I will try to explain as much as i can in layman term for why and how. Once handwiring is completed you may proceed to Firmware section. 
 
@@ -38,7 +59,7 @@ Anti ghosting is defined as 2 or more neighbouring switches was stroke and due t
 
 Possible Solution:      
 
-1. Very important to have good keymap design. General rule will be try to utilse as much I/O as possible for your keymaps. It ease the wiring and ghosting less likely to occur.    
+1. Very important to have good keymap design. General rule will be try to utilse as much I/O as possible for your keymaps. It ease the wiring and ghosting is less likely to occur.    
 2. Adding Diode might help. 
 3. Enable QMK Anti Ghosting algoritm(not recommended as sometimes might stop you from input certain key combination )
 </details>
@@ -118,29 +139,13 @@ To compile your firmware just run make up your command and run this on terminal.
 5. Last but not least, debug and recompile and repeat steps 2 to 4 to test your firmware.
 
 ##### A unccessful VIA (pill104via) was included in this repo, but it is not fully working yet & the VIA json file is **NOT** included in this repo too. I can't get it working yet.  
-
+### GLHF
  &nbsp; 
  &nbsp; 
  ***
  &nbsp; 
-## Summary 
-### Electronics Wiring 
-The wiring process will be as follow: 
-1. Prepare your handwire keyboard with switch
-2. Design your keyboard keymaps before soldering(where wire should run, where is your bluepill will be placed etc)
-3. Solder your switches  
-4. Document your switch array as you progress 
 
-### Firmware 
-The firmware preparation process will be as follow: 
-1. Setup QMK enviroment 
-2. Configure your keyboard configuration and keymaps accordingly 
-3. Compile your firmware
-4. Upload your firmwarer to Bluepill
-6. Debug, recompile and test.
-##### every OS has slightly different setup and you might need to search your problem on the web, this is not a easy journey for non-programmer. Countless of time need to be spent on trying to debug your circuit / firmware try to figure out what went wrong. 
- &nbsp;
-### GLHF
+
 
 ***
 <!-- 

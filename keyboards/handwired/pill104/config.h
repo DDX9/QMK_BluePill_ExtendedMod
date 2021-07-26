@@ -17,8 +17,8 @@
 
 #include "config_common.h"
 
-#define VENDOR_ID 0x4454
-#define PRODUCT_ID 0x5444
+#define VENDOR_ID 0x44A3
+#define PRODUCT_ID 0x54A3
 #define DEVICE_VER 0x0001
 
 #define MANUFACTURER "MOS"
